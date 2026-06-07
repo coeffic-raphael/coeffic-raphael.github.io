@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/raphaelcoeffic/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(pdftotext /Users/raphaelcoeffic/Raphael_CV.pdf -)",
+      "Bash(gh api *)",
+      "Bash(npm create *)",
+      "Bash(npx create-vite@latest . --template react)",
+      "Bash(node -e ' *)",
+      "Bash(npx --yes create-vite@latest . --template react)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cp /Users/raphaelcoeffic/Raphael_CV.pdf \"/Users/raphaelcoeffic/My open sources/Portfolio/public/Raphael_Coeffic_CV.pdf\")",
+      "Bash(pip3 install *)",
+      "WebFetch(domain:css.glass)",
+      "WebFetch(domain:www.figma.com)",
+      "WebFetch(domain:uiverse.io)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
