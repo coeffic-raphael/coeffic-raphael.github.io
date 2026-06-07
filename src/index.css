@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design tokens ───────────────────────────────────────────── */
+:root {
+  /* Dark (default) */
+  --bg-body:        #080e1a;
+  --bg-orb-1:       rgba(30, 80, 160, 0.18);
+  --bg-orb-2:       rgba(0, 180, 200, 0.10);
+  --bg-orb-3:       rgba(20, 60, 140, 0.08);
+
+  --color-primary:  #e8edf5;
+  --color-secondary:#8899aa;
+  --color-muted:    rgba(255,255,255,0.28);
+  --color-dim:      rgba(255,255,255,0.18);
+
+  --accent:         #00d2ff;
+  --accent-dark:    #0099cc;
+  --accent-bg:      rgba(0, 210, 255, 0.07);
+  --accent-border:  rgba(0, 210, 255, 0.15);
+  --accent-glow:    rgba(0, 210, 255, 0.25);
+
+  --border-subtle:  rgba(255,255,255,0.07);
+  --border-medium:  rgba(255,255,255,0.10);
+  --bg-subtle:      rgba(255,255,255,0.04);
+  --timeline-dot:   #080e1a;
+
+  --glass-bg:       rgba(255,255,255,0.04);
+  --glass-border:   rgba(255,255,255,0.08);
+  --glass-inset:    rgba(255,255,255,0.10);
+  --glass-shadow:   rgba(0,0,0,0.35);
+
+  --glass-strong-bg:      rgba(255,255,255,0.06);
+  --glass-strong-border:  rgba(255,255,255,0.10);
+  --glass-strong-inset:   rgba(255,255,255,0.14);
+
+  --navbar-bg:      rgba(8,14,26,0.90);
+  --bg-gradient:    linear-gradient(160deg, #0d1525 0%, #080e1a 55%, #0b1122 100%);
+
+  /* Card hover — dark: slightly more opaque, stays dark */
+  --glass-hover-bg:     rgba(255,255,255,0.08);
+  --glass-hover-border: rgba(255,255,255,0.14);
+
+  /* Pill tags — dark */
+  --pill-bg:     rgba(255,255,255,0.10);
+  --pill-border: rgba(255,255,255,0.20);
+  --pill-top:    rgba(255,255,255,0.32);
+
+  /* Button glass — dark */
+  --btn-glass-bg:     rgba(255,255,255,0.08);
+  --btn-glass-hover:  rgba(255,255,255,0.13);
+  --btn-glass-border: rgba(255,255,255,0.18);
+  --btn-glass-top:    rgba(255,255,255,0.30);
+  --btn-glass-bottom: rgba(0,0,0,0.12);
+}
+
+/* ─── Light mode tokens — Apple Liquid Glass ─────────────────── */
+html.light-mode {
+  /* Pure white base, colorful blobs make blur visible */
+  --bg-body:        #ffffff;
+  --bg-orb-1:       rgba(100, 160, 255, 0.28);
+  --bg-orb-2:       rgba(200, 100, 240, 0.18);
+  --bg-orb-3:       rgba(60,  220, 200, 0.18);
+
+  --color-primary:  #1d1d1f;
+  --color-secondary:#515154;
+  --color-muted:    rgba(0,0,0,0.40);
+  --color-dim:      rgba(0,0,0,0.25);
+
+  --accent:         #0a7ad8;
+  --accent-dark:    #0060b0;
+  --accent-bg:      rgba(10, 122, 216, 0.08);
+  --accent-border:  rgba(10, 122, 216, 0.20);
+  --accent-glow:    rgba(10, 122, 216, 0.22);
+
+  --border-subtle:  rgba(0,0,0,0.06);
+  --border-medium:  rgba(0,0,0,0.09);
+  --bg-subtle:      rgba(0,0,0,0.03);
+  --timeline-dot:   #ffffff;
+
+  /* Liquid glass — translucent but defined */
+  --glass-bg:             rgba(255,255,255,0.14);
+  --glass-border:         rgba(255,255,255,0.55);
+  --glass-inset:          rgba(255,255,255,0.85);
+  --glass-shadow:         rgba(0,0,0,0.05);
+
+  --glass-strong-bg:      rgba(255,255,255,0.20);
+  --glass-strong-border:  rgba(255,255,255,0.62);
+  --glass-strong-inset:   rgba(255,255,255,0.90);
+
+  --navbar-bg:      rgba(255,255,255,0.60);
+  /* Cool gray base + subtle colored orbs so backdrop-filter has something to blur */
+  --bg-gradient:
+    radial-gradient(ellipse 65% 50% at 15% 15%,  rgba(100, 150, 255, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 80%,  rgba(160, 100, 240, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 40% at 70% 25%,  rgba(60,  210, 200, 0.07) 0%, transparent 50%),
+    linear-gradient(160deg, #f4f6fb 0%, #eceef6 60%, #e5e8f2 100%);
+
+  /* Pill tags — light: white glass on cool gray bg */
+  --pill-bg:     rgba(255,255,255,0.60);
+  --pill-border: rgba(255,255,255,0.90);
+  --pill-top:    rgba(255,255,255,1.00);
+
+  /* Card hover — light: more opaque glass when lifted */
+  --glass-hover-bg:     rgba(255,255,255,0.75);
+  --glass-hover-border: rgba(255,255,255,0.96);
+
+  /* Button glass — light */
+  --btn-glass-bg:     rgba(255,255,255,0.45);
+  --btn-glass-hover:  rgba(255,255,255,0.60);
+  --btn-glass-border: rgba(255,255,255,0.85);
+  --btn-glass-top:    rgba(255,255,255,0.95);
+  --btn-glass-bottom: rgba(0,0,0,0.04);
+}
+
+/* ─── Base ────────────────────────────────────────────────────── */
+@layer base {
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg-body);
+    background-image: var(--bg-gradient);
+    color: var(--color-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: var(--accent-bg);
+    color: var(--color-primary);
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg-body); }
+  ::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 3px; }
+}
+
+/* ─── Glass components ────────────────────────────────────────── */
+@layer components {
+  .glass {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(48px) saturate(1.8) brightness(1.02);
+    -webkit-backdrop-filter: blur(48px) saturate(1.8) brightness(1.02);
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      0 8px 32px var(--glass-shadow),
+      inset 0 1.5px 0 var(--glass-inset),
+      inset 0 -0.5px 0 rgba(255,255,255,0.08);
+    transition: box-shadow 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .glass-hover {
+    will-change: transform;
+    z-index: 0;
+  }
+
+  .glass-hover:hover {
+    transform: scale(1.05) translateY(-6px);
+    z-index: 10;
+    box-shadow:
+      0 32px 80px var(--glass-shadow),
+      0 12px 32px var(--glass-shadow),
+      inset 0 1.5px 0 var(--glass-inset);
+  }
+
+  .glass-strong {
+    position: relative;
+    background: var(--glass-strong-bg);
+    backdrop-filter: blur(64px) saturate(2.0) brightness(1.03);
+    -webkit-backdrop-filter: blur(64px) saturate(2.0) brightness(1.03);
+    border: 1px solid var(--glass-strong-border);
+    box-shadow:
+      0 16px 64px var(--glass-shadow),
+      inset 0 2px 0 var(--glass-strong-inset),
+      inset 0 -0.5px 0 rgba(255,255,255,0.10);
+  }
+
+  /* Liquid glass specular rim — visible top edge highlight */
+  .glass::before,
+  .glass-strong::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      170deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.08) 25%,
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+
+  /* Semantic color helpers */
+  .c-primary   { color: var(--color-primary); }
+  .c-secondary { color: var(--color-secondary); }
+  .c-muted     { color: var(--color-muted); }
+  .c-dim       { color: var(--color-dim); }
+  .c-accent    { color: var(--accent); }
+
+  /* ── Glass bubble button ─────────────────────────────────────── */
+  .btn-glass {
+    position: relative;
+    overflow: hidden;
+    background: var(--btn-glass-bg);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid var(--btn-glass-border);
+    box-shadow:
+      inset 0 1.5px 0 var(--btn-glass-top),   /* top specular */
+      inset 0 -1px 0 var(--btn-glass-bottom),  /* bottom depth */
+      0 4px 16px var(--glass-shadow),
+      0 1px 3px var(--glass-shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+
+  /* Specular highlight — bright streak across top half */
+  .btn-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      175deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.18) 30%,
+      transparent 65%
+    );
+    pointer-events: none;
+  }
+
+  .btn-glass:hover {
+    transform: translateY(-1px) scale(1.02);
+    background: var(--btn-glass-hover);
+    box-shadow:
+      inset 0 1.5px 0 var(--btn-glass-top),
+      inset 0 -1px 0 var(--btn-glass-bottom),
+      0 8px 24px var(--glass-shadow),
+      0 2px 6px var(--glass-shadow);
+  }
+
+  .btn-glass:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  /* ── Glass pill tag — iOS 26 style ──────────────────────────── */
+  .tag-glass {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    background: var(--pill-bg);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
+    border: 1px solid var(--pill-border);
+    box-shadow:
+      inset 0 1.5px 0 var(--pill-top),
+      inset 0 -1px 0 rgba(0,0,0,0.04),
+      0 2px 8px var(--glass-shadow),
+      0 1px 2px var(--glass-shadow);
+    color: var(--color-secondary);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .tag-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.12) 35%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .tag-glass:hover {
+    transform: scale(1.04);
+  }
+
+  /* ── Accent tag ──────────────────────────────────────────────── */
+  .tag-accent {
+    position: relative;
+    overflow: hidden;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 1px solid var(--accent-border);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+
+  .tag-subtle {
+    color: var(--color-secondary);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .tag-mono {
+    color: var(--color-dim);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .border-subtle { border-color: var(--border-subtle) !important; }
+  .border-medium { border-color: var(--border-medium); }
+  .bg-subtle     { background: var(--bg-subtle); }
+}
+
+/* ─── Scroll reveal ───────────────────────────────────────────── */
+@layer utilities {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  .fade-in-delay-1 { transition-delay: 0.1s; }
+  .fade-in-delay-2 { transition-delay: 0.2s; }
+  .fade-in-delay-3 { transition-delay: 0.3s; }
+  .fade-in-delay-4 { transition-delay: 0.4s; }
+}
