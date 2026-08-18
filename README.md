@@ -1,5 +1,7 @@
 # Raphaël Coeffic — Portfolio
 
+**Contact: racoeffic@gmail.com**
+
 Personal portfolio built with React, Vite, and Tailwind CSS.
 
 ## Stack
