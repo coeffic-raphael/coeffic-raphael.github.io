@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useTheme } from '../contexts/ThemeContext'
 import ThemeToggle from './ThemeToggle'
 
 const links = ['About', 'Skills', 'Projects', 'Experience', 'Contact']
@@ -7,8 +6,6 @@ const links = ['About', 'Skills', 'Projects', 'Experience', 'Contact']
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const { isDark } = useTheme()
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll)
@@ -17,11 +14,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass border-b border-subtle' : ''
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 pointer-events-none"
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className={`glass nav-liquid max-w-5xl mx-auto px-4 sm:px-5 h-14 flex items-center justify-between pointer-events-auto ${scrolled ? 'nav-liquid-scrolled' : ''}`}>
         <a href="#hero" className="font-semibold tracking-tight" style={{ color: 'var(--color-primary)' }}>
           RC<span style={{ color: 'var(--accent)' }}>.</span>
         </a>
@@ -75,7 +70,7 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="md:hidden glass border-t border-subtle px-6 py-4">
+        <div className="md:hidden glass nav-mobile-liquid max-w-5xl mx-auto mt-2 px-6 py-5 pointer-events-auto">
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link}>
