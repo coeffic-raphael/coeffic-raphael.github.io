@@ -12,11 +12,11 @@
   --color-muted:    rgba(255,255,255,0.34);
   --color-dim:      rgba(255,255,255,0.21);
 
-  --accent:         #00d2ff;
-  --accent-dark:    #0099cc;
-  --accent-bg:      rgba(0, 210, 255, 0.07);
-  --accent-border:  rgba(0, 210, 255, 0.15);
-  --accent-glow:    rgba(0, 210, 255, 0.25);
+  --accent:         #59c3d6;
+  --accent-dark:    #328d9d;
+  --accent-bg:      rgba(89, 195, 214, 0.08);
+  --accent-border:  rgba(89, 195, 214, 0.18);
+  --accent-glow:    rgba(89, 195, 214, 0.20);
 
   --border-subtle:  rgba(255,255,255,0.07);
   --border-medium:  rgba(255,255,255,0.10);
