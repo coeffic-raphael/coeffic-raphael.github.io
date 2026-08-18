@@ -11,7 +11,7 @@ export default function About() {
 
         <div className="fade-in fade-in-delay-2 space-y-5 text-base leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
           <p>
-            I'm finishing my B.Sc. in Computer Science at Ariel University in a few months — and I've spent
+            I'm finishing my B.Sc. in Computer Science at Ariel University and I've spent
             that time building things that go beyond coursework: production platforms, AI automation tools,
             a malware detection system, mobile apps, and systems-level C++ projects.
           </p>
