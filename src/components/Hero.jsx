@@ -29,7 +29,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-2xl transition-all hover:scale-[1.02]"
             style={{
               background: `linear-gradient(135deg, var(--accent), var(--accent-dark))`,
-              color: '#fff',
+              color: 'var(--accent-contrast)',
               boxShadow: `0 0 24px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.3)`,
             }}
           >

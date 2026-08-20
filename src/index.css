@@ -12,11 +12,12 @@
   --color-muted:    rgba(255,255,255,0.34);
   --color-dim:      rgba(255,255,255,0.21);
 
-  --accent:         #59c3d6;
-  --accent-dark:    #328d9d;
-  --accent-bg:      rgba(89, 195, 214, 0.08);
-  --accent-border:  rgba(89, 195, 214, 0.18);
-  --accent-glow:    rgba(89, 195, 214, 0.20);
+  --accent:         #e0ad78;
+  --accent-dark:    #bc7b4f;
+  --accent-contrast:#1c120c;
+  --accent-bg:      rgba(224, 173, 120, 0.08);
+  --accent-border:  rgba(224, 173, 120, 0.18);
+  --accent-glow:    rgba(224, 173, 120, 0.17);
 
   --border-subtle:  rgba(255,255,255,0.07);
   --border-medium:  rgba(255,255,255,0.10);
@@ -29,9 +30,9 @@
   --glass-shadow:   rgba(0,0,0,0.48);
   --glass-tint:     rgba(39, 41, 45, 0.44);
   --glass-shine:    rgba(255,255,255,0.30);
-  --glass-caustic:  rgba(70, 205, 235, 0.08);
-  --glass-rim-blue: rgba(65, 190, 220, 0.15);
-  --glass-rim-pink: rgba(215, 135, 200, 0.06);
+  --glass-caustic:  rgba(224, 173, 120, 0.08);
+  --glass-rim-primary:   rgba(214, 146, 91, 0.17);
+  --glass-rim-secondary: rgba(255, 224, 194, 0.08);
 
   --glass-strong-bg:      rgba(255,255,255,0.06);
   --glass-strong-border:  rgba(255,255,255,0.10);
@@ -69,6 +70,7 @@ html.light-mode {
 
   --accent:         #8a6245;
   --accent-dark:    #684832;
+  --accent-contrast:#ffffff;
   --accent-bg:      rgba(138, 98, 69, 0.08);
   --accent-border:  rgba(138, 98, 69, 0.20);
   --accent-glow:    rgba(138, 98, 69, 0.18);
@@ -86,8 +88,8 @@ html.light-mode {
   --glass-tint:           rgba(255, 252, 248, 0.14);
   --glass-shine:          rgba(255,255,255,0.90);
   --glass-caustic:        rgba(255, 245, 232, 0.24);
-  --glass-rim-blue:       rgba(255,255,255,0.58);
-  --glass-rim-pink:       rgba(166, 125, 94, 0.14);
+  --glass-rim-primary:    rgba(255,255,255,0.58);
+  --glass-rim-secondary:  rgba(166, 125, 94, 0.14);
 
   --glass-strong-bg:      rgba(255,255,255,0.13);
   --glass-strong-border:  rgba(255,255,255,0.74);
@@ -163,8 +165,8 @@ html.light-mode {
       0 18px 50px -24px var(--glass-shadow),
       inset 1px 1px 0 var(--glass-inset),
       inset -1px -1px 0 rgba(0,0,0,0.08),
-      inset 10px 0 22px -24px var(--glass-rim-blue),
-      inset -10px 0 22px -24px var(--glass-rim-pink);
+      inset 10px 0 22px -24px var(--glass-rim-primary),
+      inset -10px 0 22px -24px var(--glass-rim-secondary);
     transition: box-shadow 0.45s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), background 0.25s ease;
   }
 
@@ -186,8 +188,8 @@ html.light-mode {
       0 12px 30px -18px var(--glass-shadow),
       inset 1px 1px 0 var(--glass-inset),
       inset -1px -1px 0 rgba(0,0,0,0.08),
-      inset 12px 0 28px -25px var(--glass-rim-blue),
-      inset -12px 0 28px -25px var(--glass-rim-pink) !important;
+      inset 12px 0 28px -25px var(--glass-rim-primary),
+      inset -12px 0 28px -25px var(--glass-rim-secondary) !important;
   }
 
   .glass-strong {
@@ -205,8 +207,8 @@ html.light-mode {
       0 28px 80px -32px var(--glass-shadow),
       inset 1px 1px 0 var(--glass-strong-inset),
       inset -1px -1px 0 rgba(0,0,0,0.08),
-      inset 12px 0 30px -28px var(--glass-rim-blue),
-      inset -12px 0 30px -28px var(--glass-rim-pink);
+      inset 12px 0 30px -28px var(--glass-rim-primary),
+      inset -12px 0 30px -28px var(--glass-rim-secondary);
   }
 
   /* Liquid glass specular rim — visible top edge highlight */
@@ -220,7 +222,7 @@ html.light-mode {
     padding: 1px;
     background:
       radial-gradient(240px circle at var(--glass-xp) var(--glass-yp), var(--glass-shine), transparent 36%),
-      linear-gradient(120deg, var(--glass-rim-blue), transparent 24%, transparent 72%, var(--glass-rim-pink));
+      linear-gradient(120deg, var(--glass-rim-primary), transparent 24%, transparent 72%, var(--glass-rim-secondary));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -254,8 +256,8 @@ html.light-mode {
       0 10px 34px -22px var(--glass-shadow),
       inset 1px 1px 0 var(--glass-inset),
       inset -1px -1px 0 rgba(0,0,0,0.08),
-      inset 10px 0 20px -22px var(--glass-rim-blue),
-      inset -10px 0 20px -22px var(--glass-rim-pink);
+      inset 10px 0 20px -22px var(--glass-rim-primary),
+      inset -10px 0 20px -22px var(--glass-rim-secondary);
     transition: background 0.3s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
   }
 
@@ -268,8 +270,8 @@ html.light-mode {
       0 20px 52px -24px var(--glass-shadow),
       inset 1px 1px 0 var(--glass-strong-inset),
       inset -1px -1px 0 rgba(0,0,0,0.10),
-      inset 12px 0 24px -24px var(--glass-rim-blue),
-      inset -12px 0 24px -24px var(--glass-rim-pink);
+      inset 12px 0 24px -24px var(--glass-rim-primary),
+      inset -12px 0 24px -24px var(--glass-rim-secondary);
     transform: translateY(1px);
   }
 

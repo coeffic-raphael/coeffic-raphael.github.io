@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        cyan: '#59c3d6',
-        'cyan-dim': '#328d9d',
+        accent: '#e0ad78',
+        'accent-dim': '#bc7b4f',
         navy: '#080e1a',
         'glass-white': 'rgba(255,255,255,0.06)',
         'glass-border': 'rgba(255,255,255,0.09)',
