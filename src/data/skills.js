@@ -1,7 +1,7 @@
 export const skillGroups = [
   {
     label: 'Languages',
-    skills: ['Python', 'Java', 'C', 'C++', 'C#', 'JavaScript', 'SQL', 'PHP'],
+    skills: ['Python', 'Java', 'C', 'C++', 'C#', 'JavaScript', 'SQL', 'PHP', 'Bash'],
   },
   {
     label: 'Full Stack',
@@ -13,11 +13,11 @@ export const skillGroups = [
   },
   {
     label: 'Databases',
-    skills: ['MongoDB', 'MySQL', 'Firebase / Firestore', 'Redis'],
+    skills: ['MongoDB', 'MySQL', 'Firebase / Firestore', 'Redis', 'PostgreSQL', 'SQLite', "PHPMyAdmin"],
   },
   {
     label: 'Systems & Concepts',
-    skills: ['Linux', 'C / C++ Systems', 'TCP/UDP Sockets', 'Multithreading', 'Memory Debugging', 'OS Concepts', 'Cybersecurity', 'Algorithms', 'Data Structures'],
+    skills: ['Linux', 'MacOS', 'Windows', 'C / C++ Systems', 'TCP/UDP Sockets', 'Multithreading', 'Memory Debugging', 'OS Concepts', 'Cybersecurity', 'Algorithms', 'Probability', 'Data Structures', 'Graphs', 'Linear Algebra'],
   },
   {
     label: 'Tools & Deployment',

@@ -10,7 +10,7 @@ const items = [
     period: '2023 — Present',
     title: 'AI.Coeff',
     subtitle: 'Founder & Developer',
-    description: 'Built an AI automation suite for SMEs: quote generation, invoice automation, lead generation, and email prospecting. End-to-end ownership — architecture, deployment on VPS, client relationships.',
+    description: 'Built an AI automation suite for SMEs: quote generation, invoice automation, lead generation, and email prospecting. End-to-end ownership, architecture, deployment on VPS, client relationships.',
     tags: ['Entrepreneurial', 'Python', 'Flask', 'OpenRouter', 'VPS'],
   },
   {

@@ -6,8 +6,8 @@ export default function Contact() {
           <p className="text-xs font-mono tracking-widest uppercase mb-4" style={{ color: 'var(--accent)' }}>Contact</p>
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4" style={{ color: 'var(--color-primary)' }}>Let's talk</h2>
           <p className="leading-relaxed mb-10" style={{ color: 'var(--color-secondary)' }}>
-            I'm open to full-time positions, freelance missions, and interesting projects.
-            Reach out directly — I'll get back to you quickly.
+            I'm open to full time positions, freelance missions, and interesting projects.
+            Reach out directly, I'll get back to you quickly.
           </p>
 
           <a

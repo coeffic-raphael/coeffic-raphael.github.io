@@ -13,15 +13,15 @@ export default function About() {
           <p>
             I'm finishing my B.Sc. in Computer Science at Ariel University and I've spent
             that time building things that go beyond coursework: production platforms, AI automation tools,
-            a malware detection system, mobile apps, and systems-level C++ projects.
+            a malware detection system, mobile apps, and systems level C++ projects.
           </p>
           <p>
-            My core strength is full-stack and AI development. I'm comfortable taking a product from
-            idea to deployment — designing the architecture, writing the backend, wiring the frontend,
+            My core strength is full stack and AI development. I'm comfortable taking a product from
+            idea to deployment, designing the architecture, writing the backend, wiring the frontend,
             and shipping it. I've done it with real clients and real constraints.
           </p>
           <p style={{ color: 'var(--color-muted)' }}>
-            Looking for a full-time position at a tech company where I can contribute from day one.
+            Looking for a full time position at a tech company where I can contribute from day one.
           </p>
         </div>
       </div>

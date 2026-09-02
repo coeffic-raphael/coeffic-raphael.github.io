@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="flex items-center gap-3 mb-8">
           <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--accent)' }} />
           <p className="text-xs font-mono tracking-widest uppercase" style={{ color: 'var(--accent)' }}>
-            Open to full-time positions
+            Open to full time positions
           </p>
         </div>
 
@@ -19,7 +19,7 @@ export default function Hero() {
         </p>
 
         <p className="text-base leading-relaxed mb-12 max-w-xl" style={{ color: 'var(--color-muted)' }}>
-          Full-stack development, AI automation, and backend engineering —
+          Full stack development, AI automation, backend engineering,
           building products that ship and systems that hold up.
         </p>
 

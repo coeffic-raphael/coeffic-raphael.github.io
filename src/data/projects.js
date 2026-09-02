@@ -4,7 +4,7 @@ export const projects = [
     title: 'AI.Coeff',
     subtitle: 'AI Automation Suite for Businesses',
     description:
-      'A suite of AI-powered tools that automate core business operations — quote generation, invoice creation, lead generation, and automated email prospecting. Built as a real entrepreneurial initiative, deployed on VPS with real clients.',
+      'A suite of AI powered tools that automate core business operations, quote generation, invoice creation, lead generation, and automated email prospecting. Built as a real entrepreneurial initiative, deployed on VPS with real clients.',
     what_it_shows:
       'End-to-end product ownership: architecture, AI integration, PDF generation, API design, and VPS deployment.',
     stack: ['Python', 'Flask', 'MySQL', 'OpenRouter', 'PDF Generation', 'Hostinger VPS'],
@@ -20,7 +20,7 @@ export const projects = [
     description:
       'A static malware detection system for MSI installers using machine learning. Implemented feature extraction from PE structures, a distributed processing architecture with Redis, and LightGBM model inference served via FastAPI.',
     what_it_shows:
-      'Applying ML to cybersecurity problems: feature engineering on binary files, distributed pipeline design, and production-ready API serving.',
+      'Applying ML to cybersecurity problems: feature engineering on binary files, distributed pipeline design, and production ready API serving.',
     stack: ['Python', 'LightGBM', 'FastAPI', 'Docker', 'Redis', 'Machine Learning'],
     type: 'ML / Cybersecurity',
     github: 'https://github.com/coeffic-raphael/msi_analysis',
@@ -30,7 +30,7 @@ export const projects = [
   {
     id: 'whatsapp-platform',
     title: 'WhatsApp Automation Platform',
-    subtitle: 'Multi-tenant SaaS — Twains (Contract)',
+    subtitle: 'Multi tenant SaaS — Twains (Contract)',
     description:
       'Production-grade multi-tenant WhatsApp automation platform. Worked on authentication, organization isolation, security hardening, frontend architecture with Zustand and React Query, and backend refactoring with MongoDB workflow persistence.',
     what_it_shows:
@@ -63,7 +63,7 @@ export const projects = [
     description:
       'Android professional networking application built with Java and Firebase. Implemented Firebase Authentication, Firestore real-time data, chat modules, and workflow management features.',
     what_it_shows:
-      'Mobile development with Java, real-time databases, and authentication — beyond web, demonstrating breadth across platforms.',
+      'Mobile development with Java, real time databases, and authentication — beyond web, demonstrating breadth across platforms.',
     stack: ['Java', 'Android Studio', 'Firebase', 'Firestore'],
     type: 'Mobile — Academic',
     github: 'https://github.com/coeffic-raphael/WorkConnect',
@@ -91,7 +91,7 @@ export const projects = [
     description:
       'Automation tool for business lead extraction and enrichment using Google Places API. Generates prospect databases and automates email workflows via a Streamlit interface.',
     what_it_shows:
-      'Building practical AI agents that do real business work — not demos, but tools people actually use to generate leads and send emails.',
+      'Building practical AI agents that do real business work, not demos, but tools people actually use to generate leads and send emails.',
     stack: ['Python', 'Streamlit', 'Google Places API', 'Pandas', 'Automation'],
     type: 'AI / Automation',
     github: null,
